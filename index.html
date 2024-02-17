@@ -40,9 +40,25 @@
       </style>
   </head>
   <body>
-        <header class="container mx-auto px-10 md:px-20 raleway">
-            <nav>
+        <header class="container mx-auto px-10 md:px-20">
+            <nav class="raleway">
                 <div class="navbar bg-base-100">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                          <li><a>Item 1</a></li>
+                          <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                              <li><a>Submenu 1</a></li>
+                              <li><a>Submenu 2</a></li>
+                            </ul>
+                          </li>
+                          <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
                     <div class="navbar-start"> 
                       <a class="text-4xl font-extrabold">P-Ticket</a>
                     </div>
@@ -55,12 +71,53 @@
                       </ul>
                     </div>
                     <div class="navbar-end ">
-                      <button class="btn text-primaryBtnBg text-xl font-bold flex bg-[#1DD1001A]">Bus <img src="./images/bus-icon.png" alt=""></button>
+                      <button class="text-primaryBtnBg text-xl font-bold flex gap-3 border-solid border-2 border-[#1DD10066] items-center bg-[#1DD1001A] px-8 py-4 rounded-xl">Bus <img src="./images/bus-icon.png" alt=""></button>
                     </div>
                   </div>
             </nav>
+            <!-- banner section start -->
+            <div class="w-full lg:h-[550px] mt-11 relative">
+                <div class="bg-gradient-to-t from-black via-transparent to-transparent bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-2xl" style="background-image: url('./images/banner.png'); width:100%; height:100%;">
+                    <div class="flex flex-col items-center justify-center text-center lg:gap-8"> 
+                        <h1 class="text-2xl lg:text-6xl font-extrabold raleway text-white">End-to-End Travel with <br> <span class="text-primaryBtnBg">P Paribahan</span></h1>
+                        <p class="text text-base lg:text-lg inter text-white">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                        <button class="btn border-none text-xl font-bold bg-[#1DD100] mb-3">Buy Tickets</button>
+                    </div>
+                    
+                </div>
+                <!-- banner cards -->
+                <div class="inter space-y-4 lg:space-y-0 lg:flex gap-6 justify-center mx-auto absolute lg:translate-x-52 lg:translate-y-20 lg:bottom-0 mt-5 lg:mt-0">
+                    <div class="flex gap-4 p-5 lg:p-9  bg-white border-2 border-b-[#1DD100] rounded-3xl">
+                        <div>
+                            <img src="./images/people.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-[#030712]">500K+</p>
+                            <p class="primaryFontColor text-lg font-normal">Registered users</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-5 lg:p-9 bg-white border-2 border-b-[#1DD100] rounded-3xl">
+                        <div>
+                            <img src="./images/ticket-cupon.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-[#030712]">1.7 lacks</p>
+                            <p class="primaryFontColor text-lg font-normal">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-5 lg:p-9 bg-white border-2 border-b-[#1DD100] rounded-3xl">
+                        <div>
+                            <img src="./images/stoppage.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-[#030712]">80K+</p>
+                            <p class="primaryFontColor text-lg font-normal">Rental partners</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
             
-           
         </header>
         <main>
 
