@@ -21,6 +21,8 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                primaryFontColor: '#030712B3',
+                primaryBtnBg: '#1DD100',
               }
             }
           }
@@ -28,12 +30,37 @@
       </script>
       <!-- custom css -->
       <style>
+        .raleway{
+            font-family: "Raleway", sans-serif;
+        }
+        .inter{
+            font-family:  "Inter", sans-serif;
+        }
 
       </style>
   </head>
   <body>
-        <header>
+        <header class="container mx-auto px-10 md:px-20 raleway">
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start"> 
+                      <a class="text-4xl font-extrabold">P-Ticket</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex ">
+                      <ul class="menu menu-horizontal px-1 lg:gap-14 text-primaryFontColor text-lg font-medium">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Search</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar-end ">
+                      <button class="btn text-primaryBtnBg text-xl font-bold flex bg-[#1DD1001A]">Bus <img src="./images/bus-icon.png" alt=""></button>
+                    </div>
+                  </div>
+            </nav>
             
+           
         </header>
         <main>
 
