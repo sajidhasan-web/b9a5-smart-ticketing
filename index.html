@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMART TICKETING</title>
+    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
     <!-- google fonts Raleway and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,7 +185,7 @@
                                </div>
                                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-[#1DD100] bg-[#1DD10026]">
                                 <img src="./images/seat-green.png" alt="">
-                                40 Seats left</button>
+                                <span id="seats-left">40</span> Seats left</button>
                                </div>
                               <div class="p-7 m-7  bg-[#F7F8F8] rounded-xl space-y-4">
                                 <div class="lg:flex justify-between raleway">
@@ -370,32 +371,28 @@
                             <div class="flex flex-col gap-4 bg-[#F7F8F8] p-8 rounded-xl">
                                 <div>
                                     <div class="flex justify-between">
-                                        <div class="text-base font-medium">Seat <span class="bg-[#1DD100] text-white p-1 rounded">2</span></div>
+                                        <div class="text-base font-medium">Seat <span id="added-seats" class="bg-[#1DD100] text-white p-1 rounded">0</span></div>
                                         <div class="text-base font-medium">Class</div>
                                         <div class="text-base font-medium">Price</div>
                                     </div>
                                     <div class=" border-[1px] border-dashed bg-[#03071233]"></div>
-                                    <div class="tickets-details-container">
-                                        <div class="flex justify-between">
-                                            <div class="text-[#03071299]">C2</div>
-                                            <div class="text-[#03071299]">Economy</div>
-                                            <div class="text-[#03071299]">550</div>
-                                        </div>
+                                    <div id="tickets-details-container">
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class="divider"></div> 
                                 <div class="flex justify-between">
                                     <p class="font-medium text-base">Total Price</p>
-                                    <p class="font-medium text-base">BDT <span class="total-price">1100</span></p>
+                                    <p class="font-medium text-base">BDT <span id="total-price">0</span></p>
                                 </div>
                                 <div class="bg-white p-2 flex rounded-xl justify-between">
                                     <input type="text" class="outline-none" placeholder="Have any coupon?">
-                                    <button class="text-white rounded-lg py-3 px-5 font-semibold bg-[#1DD100]">Apply</button>
+                                    <button id="apply-btn"  class=" text-black rounded-lg py-3 px-5 font-semibold">Apply</button>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="font-medium text-base">Grand Total</p>
-                                    <p class="font-medium text-base">BDT <span class="total-price">1100</span></p>
+                                    <p class="font-medium text-base">BDT <span id="grand-total">0</span></p>
                                 </div>
                             </div>
                            <div class="space-y-5 mt-5">
