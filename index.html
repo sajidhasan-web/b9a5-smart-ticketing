@@ -71,7 +71,7 @@
                       </ul>
                     </div>
                     <div class="navbar-end ">
-                      <button class="text-primaryBtnBg text-xl font-bold flex gap-3 border-solid border-2 border-[#1DD10066] items-center bg-[#1DD1001A] px-8 py-4 rounded-xl">Bus <img src="./images/bus-icon.png" alt=""></button>
+                      <button onclick="scrollToSection()" class="text-primaryBtnBg text-xl font-bold flex gap-3 border-solid border-2 border-[#1DD10066] items-center bg-[#1DD1001A] px-8 py-4 rounded-xl">Bus <img src="./images/bus-icon.png" alt=""></button>
                     </div>
                   </div>
             </nav>
@@ -217,7 +217,7 @@
                     <!-- ticket left section end-->
    
                    <!-- your seat section -->
-                   <div class=" p-8 bg-white mt-6 rounded-3xl inter lg:flex items-center gap-16">
+                   <div id="ticket-section" class=" p-8 bg-white mt-6 rounded-3xl inter lg:flex items-center gap-16">
                        <div class="space-y-6 flex-1 ">
                             <h4 class="text-2xl font-semibold">Select Your Seat</h4>
                             <div class="border-[1px] border-dashed bg-[#03071233]"></div>
@@ -341,7 +341,7 @@
                                     <div class="seat px-10 py-3 rounded-xl W-28 bg-[#F7F8F8]">I1</div>
                                     <div class="seat px-10 py-3 rounded-xl W-28 bg-[#F7F8F8]">I2</div>
                                 </div>
-                                <div class="flex gap-8">
+                                <div class="flex justify-center gap-8">
                                     <div class="seat px-10 py-3 rounded-xl bg-[#F7F8F8]">I3</div>
                                     <div class="seat px-10 py-3 rounded-xl bg-[#F7F8F8]">I4</div>
                                 </div>
@@ -375,16 +375,14 @@
                                         <div class="text-base font-medium">Price</div>
                                     </div>
                                     <div class=" border-[1px] border-dashed bg-[#03071233]"></div>
-                                    <div class="flex justify-between">
-                                        <div class="text-[#03071299]">C2</div>
-                                        <div class="text-[#03071299]">Economy</div>
-                                        <div class="text-[#03071299]">550</div>
+                                    <div class="tickets-details-container">
+                                        <div class="flex justify-between">
+                                            <div class="text-[#03071299]">C2</div>
+                                            <div class="text-[#03071299]">Economy</div>
+                                            <div class="text-[#03071299]">550</div>
+                                        </div>
                                     </div>
-                                    <div class="flex justify-between">
-                                        <div class="text-[#03071299]">C2</div>
-                                        <div class="text-[#03071299]">Economy</div>
-                                        <div class="text-[#03071299]">550</div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="divider"></div> 
                                 <div class="flex justify-between">
@@ -430,10 +428,36 @@
 
 
             </section>
+            <footer>
 
+            </footer>
         </main>
-        <footer>
+        <footer class="bg-[#030712]">
+            <div  class="container mx-auto p-14 md:p-32">
+                
+                    <div class="flex justify-between ">
+                        <div class="space-y-5">
+                                <p class="text-white text-4xl font-extrabold raleway">P-Ticket</p>
+                                <p class="text-[#FFFFFFCC]">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                        </div>
+                        <div class="space-y-5">
+                            <p class="text-xl font-semibold text-white raleway">Download our app</p>
+                            <div><a href="#"><img src="./images/payStore.png" alt=""></a></div>
+                        </div>
+                    </div>
+                    <div class="border-[1px] border-dashed bg-[#03071233] mt-12"></div>
+                    <div class="flex justify-between mt-8">
+                        <p class="text-[#FFFFFFB2]">@all rights reserved, P-Ticket services limited.2024</p>
+                        <div class="flex gap-8">
+                            <p class="font-medium text-white">Terms & condition</p>
+                            <p class="font-medium text-white">Return & refund policy</p>
+                            <p class="font-medium text-white">Privacy policy</p>
+                        </div>
+                    </div>
+               
+            </div>
 
         </footer>
+        <script src="./scripts/index.js"></script>
   </body>
 </html>
