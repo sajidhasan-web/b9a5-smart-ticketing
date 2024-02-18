@@ -9,6 +9,8 @@ function scrollToSection(){
 
 const price = 550
 let discountPrice = 0
+let totalPrice = 0
+let grandTotalPrice = 0
 
 const seats = document.querySelectorAll('.seat')
 
@@ -42,10 +44,8 @@ for(let seat of seats){
             }
         }
 
-       
 
-        // console.log("seatName:", seatName);
-        // console.log("selectedSeats:", selectedSeats);
+       
 
 
          seat.classList.add("bg-primaryBtnBg", "text-white")
@@ -97,28 +97,35 @@ for(let seat of seats){
         
         // total price
  
-        const totalPrice = selectedSeats.length * price
+        totalPrice = selectedSeats.length * price
         document.getElementById('total-price').innerText = totalPrice 
         
 
+       
         if(totalPrice == 2200){
             const applyBtn = document.getElementById('apply-btn')
             const btnColor = applyBtn.classList.add('bg-[#1DD100]', 'text-white')
             applyBtn.addEventListener('click', function(e){
                 const inputValue = e.target.parentNode.childNodes[1].value
-                if(inputValue === 'NEW15'){
+                if(inputValue=== 'NEW15'){
                      discountPrice = totalPrice * 15 / 100
                      const grandTotalPrice = totalPrice - discountPrice
                     document.getElementById('grand-total').innerText = grandTotalPrice
+                    inputValue = ' '
                 }
-                else if(inputValue === 'Couple 20'){
+                else if(inputValue=== 'Couple 20'){
                     discountPrice = totalPrice * 20 / 100
-                    const grandTotalPrice = totalPrice - discountPrice
+                     grandTotalPrice = totalPrice - discountPrice
                     document.getElementById('grand-total').innerText = grandTotalPrice
+                    inputValue = ' '
+                }
+                else{
+                    return alert('Invalid coupon. Please provide a valid coupon.')
                 }
             })
             
-
+            
+        
         }
 
 
@@ -136,7 +143,6 @@ for(let seat of seats){
 
     })
 }
-
 
 
 
