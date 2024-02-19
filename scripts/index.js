@@ -100,22 +100,26 @@ for(let seat of seats){
         totalPrice = selectedSeats.length * price
         document.getElementById('total-price').innerText = totalPrice 
         
-
+        const grandTotalPrice = totalPrice
+        document.getElementById('grand-total').innerText = totalPrice
        
         if(totalPrice == 2200){
             const applyBtn = document.getElementById('apply-btn')
             const btnColor = applyBtn.classList.add('bg-[#1DD100]', 'text-white')
             applyBtn.addEventListener('click', function(e){
                 const inputValue = e.target.parentNode.childNodes[1].value
+  
+            document.getElementById('grand-total').innerText = totalPrice
+
                 if(inputValue=== 'NEW15'){
                      discountPrice = totalPrice * 15 / 100
-                     const grandTotalPrice = totalPrice - discountPrice
+                    const grandTotalPrice = totalPrice - discountPrice
                     document.getElementById('grand-total').innerText = grandTotalPrice
                     inputValue = ' '
                 }
                 else if(inputValue=== 'Couple 20'){
                     discountPrice = totalPrice * 20 / 100
-                     grandTotalPrice = totalPrice - discountPrice
+                    const grandTotalPrice = totalPrice - discountPrice
                     document.getElementById('grand-total').innerText = grandTotalPrice
                     inputValue = ' '
                 }
