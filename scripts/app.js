@@ -116,7 +116,7 @@ for (let seat of seats) {
 					document.getElementById('grand-total').innerText = grandTotalPrice;
 				} else if (inputValue === 'Couple 20') {
 					discountPrice = totalPrice * 20 / 100;
-					grandTotalPrice = totalPrice - discountPrice; // Assuming grandTotalPrice is a global variable
+					grandTotalPrice = totalPrice - discountPrice;
 					document.getElementById('grand-total').innerText = grandTotalPrice;
 				} else {
 					return alert('Invalid coupon. Please provide a valid coupon.');
